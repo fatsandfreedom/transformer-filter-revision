@@ -2,6 +2,8 @@
 
 A research paper revision project for IEEE IVMSP 2026.
 
+[中文版 README](README_cn.md)
+
 ## Overview
 
 This project develops and validates a **filtering-theoretic interpretation of Transformers** from a state-space perspective. The central thesis interprets the Transformer attention mechanism as an **adaptive non-parametric estimator**, analogous to the **Wiener filter**, operating in a latent state space.
@@ -34,6 +36,30 @@ transformer_filter_revision/
 └── template/
     └── 2026IVMSP_paper.tex        # Official IVMSP 2026 template
 ```
+
+## Paper Principle
+
+The paper proposes interpreting the Transformer's self-attention mechanism through the lens of **optimal filtering theory**.
+
+**Key insight:** At each timestep `t`, the attention-weighted prediction can be written as:
+
+```
+θ_t = (X^T W_t X + λI)^{-1} X^T W_t y
+```
+
+This is exactly the **Wiener filter** (regularized WLS), where:
+- `X` = latent state matrix (keys/values from encoder)
+- `W_t = diag(softmax(q_t K^T / √d))` = attention weights as a diagonal weighting matrix
+- `λI` = ridge regularization (analogous to noise-to-signal ratio in Wiener filter)
+- `q_t` = query vector at time `t`
+
+**Interpretation chain:**
+1. The encoder maps raw observations into a latent state space (acoustic fingerprints → 64D vectors)
+2. The query `q_t` represents the "desired signal" at time `t`
+3. Attention scores `W_t` act as **adaptive kernel weights**, concentrating on the most relevant past states
+4. The WLS solution `θ_t` is the minimum-variance linear estimator — the discrete-time Wiener filter
+
+This reframes attention not as a "soft lookup" but as a **data-driven spectral estimator** that adapts its frequency response to the local signal statistics, providing a principled state-space interpretation of why Transformers work for sequential prediction tasks.
 
 ## Core Model: ISFOTransformer
 
