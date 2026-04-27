@@ -101,3 +101,17 @@ python code/analysis/run_all_analysis.py
 
 - Figures saved to `outputs/figs/`
 - Metrics saved to `outputs/logs/`
+
+## Citation
+
+If you use this work, please cite:
+
+```bibtex
+@inproceedings{xiao2026filtering,
+  title     = {A Filtering-Theoretic Interpretation of Transformers: A State-Space Perspective},
+  author    = {Xiao, Yigong and Wang, Kecheng and Wang, Yun and Huang, Niannian and Zhou, Changan},
+  booktitle = {IEEE International Workshop on Multimedia Signal Processing (IVMSP)},
+  year      = {2026},
+  organization = {IEEE}
+}
+```
