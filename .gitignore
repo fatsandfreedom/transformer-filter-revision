@@ -1,0 +1,22 @@
+# Zip files
+*.zip
+
+# Agent instructions
+AGENTS.md
+
+# Python
+__pycache__/
+*.py[cod]
+*.pkl
+
+# Outputs
+outputs/logs/*.pkl
+
+# LaTeX
+*.aux
+*.log
+*.out
+*.synctex.gz
+
+# OS
+.DS_Store

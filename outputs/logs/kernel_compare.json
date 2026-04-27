@@ -1,0 +1,6 @@
+{
+  "num_evaluated_steps": 210,
+  "attention_weighted_mse": 0.14607157113608293,
+  "uniform_weighted_mse": 0.387383706090008,
+  "mse_gap": 0.24131213495392506
+}

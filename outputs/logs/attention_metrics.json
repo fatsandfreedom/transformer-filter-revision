@@ -1,0 +1,11 @@
+{
+  "num_pairs": 10500,
+  "topk": 5,
+  "mean_attention_weight": 0.09639841429429084,
+  "attention_spatial_corr": -0.12875567405630783,
+  "attention_temporal_corr": -0.13844861639476574,
+  "mean_spatial_distance": 1.0713890584120083,
+  "mean_temporal_gap": 19.546095238095237,
+  "mean_spatial_percentile": 0.3459677384660867,
+  "mean_temporal_percentile": 0.30251853502670933
+}
