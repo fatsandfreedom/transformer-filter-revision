@@ -10,31 +10,44 @@ This project develops and validates a **filtering-theoretic interpretation of Tr
 
 > Paper title: *"A Filtering-Theoretic Interpretation of Transformers: A State-Space Perspective"*
 
+## Final Paper
+
+The camera-ready submission for IEEE IVMSP 2026 is located at:
+
+**[`IEEE-conference-template-062824/final_submission.pdf`](IEEE-conference-template-062824/final_submission.pdf)**
+
+Source: [`IEEE-conference-template-062824/final_submission.tex`](IEEE-conference-template-062824/final_submission.tex)
+
 ## Repository Structure
 
 ```
 transformer_filter_revision/
+├── IEEE-conference-template-062824/   # Camera-ready submission (IEEE official template)
+│   ├── final_submission.tex           # Final paper source (camera-ready)
+│   ├── final_submission.pdf           # Final compiled PDF  <-- SUBMIT THIS
+│   └── IEEEtran.cls                   # IEEE template class
+├── IEEEtranBST2/                      # IEEE bibliography style
+│   └── IEEEtran.bst
 ├── code/
-│   ├── sim_main.py                # Main simulation and training script
+│   ├── sim_main.py                    # Main simulation and training script
 │   └── analysis/
-│       ├── attention_analysis.py  # Attention vs spatial/temporal distance
-│       ├── kernel_compare.py      # Dot-product vs uniform kernel comparison
-│       ├── knn_metrics.py         # Latent space KNN consistency metric
-│       └── run_all_analysis.py    # Run all analyses
+│       ├── attention_analysis.py      # Attention vs spatial/temporal distance
+│       ├── kernel_compare.py          # Dot-product vs uniform kernel comparison
+│       ├── knn_metrics.py             # Latent space KNN consistency metric
+│       └── run_all_analysis.py        # Run all analyses
 ├── docs/
-│   ├── revision_plan.md           # Revision priorities and plan
-│   └── revier_comments.md         # IEEE reviewer comments (3 reviewers)
+│   ├── revision_plan.md               # Revision priorities and plan
+│   └── revier_comments.md             # IEEE reviewer comments (3 reviewers)
 ├── outputs/
-│   ├── figs/                      # Generated figures (PNG)
-│   └── logs/                      # Metrics (JSON) and cached simulation data
+│   ├── figs/                          # Generated figures (PNG)
+│   └── logs/                          # Metrics (JSON) and cached simulation data
 ├── paper/
-│   ├── original.tex               # Original submitted version
-│   ├── revised.tex                # Revised version (in progress)
-│   ├── revised.pdf                # Compiled PDF
-│   ├── refs.bib                   # Bibliography
-│   └── figures/                   # Paper figures
+│   ├── original.tex                   # Original submitted version
+│   ├── revised.tex                    # Intermediate revised version
+│   ├── refs.bib                       # Bibliography
+│   └── figures/                       # Paper figures
 └── template/
-    └── 2026IVMSP_paper.tex        # Official IVMSP 2026 template
+    └── 2026IVMSP_paper.tex            # Official IVMSP 2026 template
 ```
 
 ## Paper Principle
